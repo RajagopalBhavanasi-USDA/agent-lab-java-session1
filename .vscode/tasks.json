@@ -4,7 +4,7 @@
 		{
 			"label": "mvn: run",
 			"type": "shell",
-			"command": "cd socops && ./mvnw spring-boot:run",
+			"command": "$env:JAVA_HOME='C:\\softwaredistribution\\fpacdev\\java\\java-21-openjdk-21.0.7.0.6-1.win.jdk.x86_64'; $env:Path=($env:JAVA_HOME + '\\bin;' + $env:Path); cd socops; ./mvnw spring-boot:run",
 			"isBackground": true,
 			"problemMatcher": {
 				"pattern": {
@@ -27,13 +27,13 @@
 		{
 			"label": "mvn: build",
 			"type": "shell",
-			"command": "cd socops && ./mvnw clean package",
+			"command": "$env:JAVA_HOME='C:\\softwaredistribution\\fpacdev\\java\\java-21-openjdk-21.0.7.0.6-1.win.jdk.x86_64'; $env:Path=($env:JAVA_HOME + '\\bin;' + $env:Path); cd socops; ./mvnw clean package",
 			"group": "build"
 		},
 		{
 			"label": "mvn: test",
 			"type": "shell",
-			"command": "cd socops && ./mvnw test",
+			"command": "$env:JAVA_HOME='C:\\softwaredistribution\\fpacdev\\java\\java-21-openjdk-21.0.7.0.6-1.win.jdk.x86_64'; $env:Path=($env:JAVA_HOME + '\\bin;' + $env:Path); cd socops; ./mvnw test",
 			"group": "test"
 		}
 	]

@@ -2,50 +2,80 @@
 
 # Soc Ops
 
-Social Bingo game for in-person mixers. Find people who match the questions and get 5 in a row!
+Soc Ops is a social bingo experience for in-person mixers, workshops, and team events.
+Participants match prompts with real people in the room and race to complete five-in-a-row.
 
-📚 **[View Lab Guide](workshop/GUIDE.md)**
-
----
-
-## 📚 Lab Guide
-
-| Part | Title |
-|------|-------|
-| [**00**](workshop/00-overview.md) | Overview & Checklist |
-| [**01**](workshop/01-setup.md) | Setup & Context Engineering |
-| [**02**](workshop/02-design.md) | Design-First Frontend |
-| [**03**](workshop/03-quiz-master.md) | Custom Quiz Master |
-| [**04**](workshop/04-multi-agent.md) | Multi-Agent Development |
-
-> 📝 Lab guides are also available in the [`workshop/`](workshop/) folder for offline reading.
+[Start the Lab Guide](workshop/GUIDE.md)
 
 ---
 
-## Prerequisites
+## Why This Project Is Fun
+
+- Fast to run locally and easy to customize.
+- Great demo app for Spring Boot + Thymeleaf fundamentals.
+- Built for agent-driven development workshops.
+- Includes structured labs from setup to multi-agent workflows.
+
+---
+
+## Quick Start
+
+### Prerequisites
 
 - [Java 21 JDK](https://adoptium.net/) or higher
-- [Apache Maven 3.9+](https://maven.apache.org/) (or use the included Maven Wrapper)
+- Maven 3.9+ (or use the included Maven Wrapper)
 
-## Run
+### Run Locally
 
 ```bash
 cd socops
 ./mvnw spring-boot:run
 ```
 
-## Build
+Open http://localhost:8080
+
+### Build
 
 ```bash
 cd socops
 ./mvnw clean package
 ```
 
-## Test
+### Test
 
 ```bash
 cd socops
 ./mvnw test
 ```
 
-Deploys automatically to GitHub Pages on push to `main`.
+---
+
+## Workshop Journey
+
+| Part | Focus |
+|------|-------|
+| [00](workshop/00-overview.md) | Overview and checklist |
+| [01](workshop/01-setup.md) | Setup and context engineering |
+| [02](workshop/02-design.md) | Design-first frontend |
+| [03](workshop/03-quiz-master.md) | Custom quiz-master agent |
+| [04](workshop/04-multi-agent.md) | Multi-agent development |
+| [05](workshop/05-complete.md) | Wrap-up and completion |
+
+Browse all guides in [workshop](workshop/).
+
+---
+
+## Project Map
+
+- Application code: [socops](socops/)
+- UI template: [socops/src/main/resources/templates/game.html](socops/src/main/resources/templates/game.html)
+- Styles: [socops/src/main/resources/static/css/app.css](socops/src/main/resources/static/css/app.css)
+- API/controller: [socops/src/main/java/com/socops/web/BingoRestController.java](socops/src/main/java/com/socops/web/BingoRestController.java)
+- Tests: [socops/src/test/java/com/socops/service/BoardAssemblerTests.java](socops/src/test/java/com/socops/service/BoardAssemblerTests.java)
+- Documentation site assets: [docs](docs/)
+
+---
+
+## Deployment Note
+
+The docs site deploys automatically to GitHub Pages when changes are pushed to main.
